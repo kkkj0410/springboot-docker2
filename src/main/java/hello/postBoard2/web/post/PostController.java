@@ -5,6 +5,7 @@ import hello.postBoard2.domain.member.Member;
 import hello.postBoard2.domain.member.MemberRepository;
 import hello.postBoard2.domain.post.Post;
 import hello.postBoard2.domain.post.PostRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

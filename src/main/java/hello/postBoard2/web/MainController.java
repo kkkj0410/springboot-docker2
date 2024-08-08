@@ -39,8 +39,9 @@ public class MainController {
     PostRepository postRepository;
 
     @GetMapping
-    public String mainForm(Model model)
+    public String mainForm(Model model, HttpServletRequest request)
     {
+
         model.addAttribute("posts", postRepository.findAll());
 
         return "main-form";

@@ -33,12 +33,6 @@ public class MemberController {
         return "members/new-form";
     }
 
-//    @PostMapping("/new-form")
-//    public String newForm(@Valid @ModelAttribute Member member)
-//    {
-//        memberRepository.saveMember(member);
-//        return "redirect:/";
-//    }
 
     @PostMapping("/new-form")
     public String newForm(@RequestParam String loginId, @RequestParam String name)
@@ -57,26 +51,6 @@ public class MemberController {
         return "members/login";
     }
 
-//    @PostMapping("/login")
-//    public String login(@Valid @ModelAttribute Member member,
-//                        HttpServletRequest request,
-//                        @RequestParam(defaultValue = "/") String redirectURL)
-//    {
-//        Member findMember = memberRepository.Login(member.getLoginId(), member.getName());
-//        if(findMember == null)
-//        {
-//            log.info("회원 가입 실패 : {}", member);
-//            log.info("회원 가입 실패 이름 : {}", member.getName());
-//            return "redirect:/members/new-form";
-//        }
-//
-//        HttpSession session = request.getSession(true);
-//
-//        session.setAttribute(SessionConst.LOG_KEY, findMember);
-//
-//        log.info("회원 가입 성공 : {}", findMember);
-//        return "redirect:" + redirectURL;
-//    }
 
     @PostMapping("/login")
     public String login(@RequestParam String loginId, @RequestParam String name,
